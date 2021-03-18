@@ -64,3 +64,34 @@ El archivo airTribu.xlsx , es un excel con el resumen de todos los archivos.
 * Notas: Los nombres de las tablas serán decididos por el alumno, si se cree conveniente se podrán particionar algunas de ellas, no siendo obligatorio pero si valorado positivamente. 
 Habrá partes que os resulten “difíciles”, por cosas que no hemos hecho todavía, GOOGLE ES VUESTRO AMIGO.
 Atreveros con cosas, sed originales, hay mil maneras de resolver algo
+********************************************************************************************
+Ejercicios extra:
+7-crear un tabla resultado que tenga la información del origen de los vuelos y su retraso acumulado por día (sin importar el destino)
+Ejemplo, si partimos de los siguientes datos:
+---------------------------------------
+origen		destino		día		retraso
+---------------------------------------
+AAA			XXX			1		5
+BBB			YYY			3		10
+AAA			BBB			2		20
+BBB			QQQ			20		15
+
+el resultado sería:
+---------------------------------------
+origen		día		retraso		retraso_acumulado
+-------------------------------------------------
+AAA			1		5			5
+AAA			2		20			25
+BBB			3		10			10
+BBB			20		20			30
+
+Pista: yo usé window function para resolverlo.
+
+8-convertir las operaciones realizadas para resolver el ejercicio 7 en un método definido por el alumno, que devuelva dicho resultado.
+9-sobre el resultado del ejercicio 4, añade otra columna que sea "Pais_VIP" donde se identifique si un pais es VIP (los paises VIP son España, Perú y México tanto en origen como destino), para ello haz uso de UDF
+10-si se desea almacenar la información del resultado del ejercicio 4 en solo 1 archivo, ¿como lo harías? ¿y si lo quisiera en 10?
+11-explica si usarías en algún momento la función cache. Diferencias entre cache y persist.
+12-sobre el resultado del ejercicio 9, salva en una tabla hive solo cuando el origen sea Perú. Despues de eso vuelve a salvar sobre la misma tabla el resutado de filtrar cuando el origen es México. Por lo tanto en la tabla Hive resultado de este ejercicio deben aparecer los registros de paises Perú y Mexico.
+13-explica que es el shuffle y como afecta al procesamiento.
+14.¿Cómo identificar el shuffle en un dataframe y cómo corregirlo?
+
